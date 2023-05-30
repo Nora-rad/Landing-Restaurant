@@ -1,0 +1,23 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Standardise some UI treatments.
+
+$global-radius: 3px !default;
+//$global-transition: all 300ms ease-in-out !default;
+$inuit-static-images: false;
+$global-font-size: 16px;
+$main-color: #fff;
+$secondary-color: #FF4800;
+$primary-color: #D14800;
+$long-text: #DADADA;
+$bg-dark: #181110;
+
+$Roboto-slab-regular:'Roboto Slab Regular', serif;
+$Roboto-slab-bold:'Roboto Slab Bold', serif;
+$Catamaran-regular:'Catamaran Regular', sans-serif;
+$Catamaran-bold:'Catamaran Bold', sans-serif;

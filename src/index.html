@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="EN">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXX-X');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Landing Page Restaurant">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercadito</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="MarkItAsDone">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MarkItAsDone">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1.0.0">
+  <link rel="manifest" href="site.webmanifest?v=1.0.0">
+  <link rel="mask-icon" href="safari-pinned-tab.svg?v=1.0.0" color="#3c3ce5">
+  <link rel="shortcut icon" href="favicon.ico?v=1.0.0">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="mstile-150x150.png">
+  <meta name="msapplication-TileColor" content="#3c3ce5">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" fetchpriority="high" as="image" href="/images/header-bg.webp" type="image/webp">
+  <!-- build:css styles/vendor.min.css -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.min.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <svg aria-hidden="true"  class="d-none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-hamburger"  viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M34 28.3337H0V24.5559H34V28.3337ZM34 18.8892H0V15.1114H34V18.8892ZM34 5.66699V9.44477H0V5.66699H34Z" fill="white"/>
+      </symbol>
+      <symbol id="icon-close" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
+        <path d="M24 1.413 22.609.024 12 10.613 1.391.024 0 1.413 10.609 12 0 22.59l1.391 1.388L12 13.39l10.609 10.588L24 22.59 13.39 12 24 1.413Z" fill="#fff"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs>
+      </symbol>
+      <symbol id="arrow-down" width="16" height="35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="m8.795 34.733 6.94-6.994a.906.906 0 0 0 0-1.28.892.892 0 0 0-1.272 0l-5.41 5.447V.91A.907.907 0 0 0 8.147 0c-.5 0-.904.407-.904.91v30.995l-5.397-5.447a.892.892 0 0 0-1.272 0 .904.904 0 0 0-.265.644c0 .237.089.466.265.644l6.948 6.994a.899.899 0 0 0 1.272-.007Z" fill="#fff"/>
+      </symbol>
+    </defs>
+  </svg>
+  <header class="o-section  o-section-header">
+    <div class="o-section__wrapper">
+      <nav class="header__nav u-flex u-flex--cross-center">
+        <div class="nav__logo">
+          <a href="/" title="Mercadito"><img src="images/logo.svg" width="208" height="113" alt="Mercadito" loading="lazy"></a>
+        </div>
+        <div class="nav__menu">
+          <ul class="c-nav u-flex">
+            <li class="c-nav__items js-nav-item"><a href="#why-us" title="why us" class="active c-nav__items__link upper-case">why us</a></li>
+            <li class="c-nav__items js-nav-item"><a href="#menu" title="menu" class="c-nav__items__link upper-case">menu</a></li>
+            <li class="c-nav__items js-nav-item"><a href="#popular-dishes" title="c-nav__items__link popular dishes" class="upper-case">popular dishes</a></li>
+            <li class="c-nav__items js-nav-item"><a href="#book" title="book" class="c-nav__items__link upper-case">book</a></li>
+            <li class="c-nav__items js-nav-item"><a href="#contact" title="contact" class="c-nav__items__link upper-case">contact</a></li>
+          </ul>
+          <button class="nav__menu--close  js-nav-menu-close" type="button" aria-label="Close menu">
+            <svg class="icon icon-close" width="24" height="24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="c-header__toggle  hide--tablet js-header-toggle" type="button" aria-label="Hamburger menu">
+          <svg class="icon icon-hamburger" width="34" height="34">
+            <use xlink:href="#icon-hamburger"></use>
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <div class="o-section__wrapper c-hero text u-flex ">
+      <h1 class="c-hero__title">
+        Book a table in the best Mexican restaturant
+      </h1>
+      <p class="c-hero__off">30% off for the Christmas</p>
+      <div class="u-flex c-hero__links">
+        <a href="" class="c-btn c-btn--primary" title="Book Now">Book Now</a>
+        <a href="" class="c-btn c-btn--dark" title="See Menu">See Menu</a>
+      </div>
+    </div>
+  </header>
+  <main>
+
+  </main>
+  <!-- build:js scripts/vendor.min.js -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.min.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
