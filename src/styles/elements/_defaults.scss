@@ -43,11 +43,15 @@ body::-webkit-scrollbar-thumb:hover{background:#6c757d}
 .mb-0{
   margin-bottom:0!important;
 }
+.pt-0{
+  padding-top: 0!important;
+}
 .c-title{
   position: relative;
   font-family: $Roboto-slab-regular;
   font-weight: 400;
   margin-bottom:3rem;
+  margin-top:.5rem;
   font-size: 1.7rem;
   @include mq($from:0,$until:desktop) {
    text-align: center;
@@ -115,12 +119,49 @@ body::-webkit-scrollbar-thumb:hover{background:#6c757d}
       }
     }
   }
-
-
+}
+.bg-transparent{
+  border:none ;
+  background-color: transparent;
+}
+.text-center{
+  text-align: center;
 }
 .hide--tablet{
   @include mq(tablet) {
     display: none
   }
 }
+ .flickity-button{
+   border: none;
+   top:-3.6rem;
+   background: url("../../images/arrow-right.svg") no-repeat center;
+   @include mq($from:0,$until:desktop) {
+     &.next{
+       right: calc(50% - 55px) !important;
+     }
+   }
+   &:hover{
+     background: url("../../images/arrow-right.svg") no-repeat center;
+   }
+   &.previous{
+     right: 95px;
+     left: unset;
+     background: url("../../images/arrow-left.svg") no-repeat center;
+     @include mq($from:0,$until:desktop) {
+       right: calc(50% + 15px) !important;
+      }
+     &:hover{
+       background: url("../../images/arrow-left.svg") no-repeat center;
+     }
+   }
+   svg{
+     display: none;
+   }
+   &:focus{
+     box-shadow: none;
+   }
+}
+
+
 

@@ -73,3 +73,60 @@
     }
   }
 }
+.o-section-book{
+  background: linear-gradient(180deg, #000000 3.68%, rgba(0, 0, 0, 0.2) 72.66%), url('../../images/book-bg.webp') center;
+  background-size: cover;
+   .form__group{
+    flex-direction: column;
+     margin-bottom: 1.5rem;
+    label{
+      color: #909090;
+      margin-bottom: .5rem;
+    }
+     .c-btn--primary{
+       line-height: 2rem;
+     }
+  }
+}
+.c-popular-dishes{
+  &__wrapper{
+    width: 100%;
+    margin-top: 2rem;
+    position: relative;
+    @include mq($from:0,$until:tablet) {
+      text-align: center;
+    }
+  }
+  &__title{
+    font-family: $Roboto-slab-regular;
+
+  }
+  &__img{
+    max-width: 100%;
+  }
+  &__note{
+    color: #DADADA;
+    line-height: 130%;
+  }
+  &__pay{
+    color: #DADADA;
+    font-size: 1.3rem;
+  }
+  .carousel-cell{
+    width: 100%;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-status{
+    @include mq($from:0,$until:desktop) {
+      text-align: center;
+      padding-right:0;
+      margin-top:2rem;
+    }
+    @include mq(desktop) {
+      padding-right: 60px;
+      text-align: right;
+    }
+  }
+}

@@ -22,7 +22,22 @@
       menu.classList[action]('open');
     }
   }
+
   document.addEventListener('DOMContentLoaded', function() {
+
+    let flkty = new Flickity('.carousel',{contain:false, adaptiveHeight:true,prevNextButtons:true,draggable:true,pageDots:false});
+    let carouselStatus = document.querySelector('.carousel-status');
+
+    function updateStatus() {
+      let slideNumber = flkty.selectedIndex + 1;
+      carouselStatus.innerHTML =` <span style="color:#ff4800">${slideNumber}</span>  / ${flkty.slides.length} `;
+    }
+    flkty.resize();
+    updateStatus();
+    flkty.on( 'select', updateStatus );
+
+    document.getElementById('form-date').valueAsDate = new Date();
+
     const tabs = document.querySelector(".js-tabs");
     const tabButton = document.querySelectorAll(".js-tab-button");
     const contents = document.querySelectorAll(".js-tab-content");
@@ -55,5 +70,23 @@
     let scrollToMenu = document.getElementsByClassName('js-scroll-menu')[0];
     addScrollListener(scrollToWhyUs, 'o-section-why-us');
     addScrollListener(scrollToMenu, 'o-section-menu');
+
+
+    const incrementButton = document.getElementById('incrementButton');
+    const decrementButton = document.getElementById('decrementButton');
+    const inputElement = document.getElementById('form-number');
+    incrementButton.addEventListener('click', () => {
+      incrementOrDecrement( true);
+    });
+    decrementButton.addEventListener('click', () => {
+      incrementOrDecrement(false);
+    });
+    function incrementOrDecrement( increment) {
+      const currentValue = Number(inputElement.value);
+      if (!isNaN(currentValue) || currentValue > 0 ) {
+        let newValue =  increment ? currentValue + 1 : currentValue - 1;
+        inputElement.value =newValue >0 ? newValue : 0
+       }
+    }
   });
 })();

@@ -1,7 +1,9 @@
 // TOOLS
 @import '../../node_modules/normalize.css/normalize';
+
 @import 'tools/_mq';
 @import 'tools/tools.aliases';
+@import 'tools/_flickity';
 
 // SETTINGS
 @import 'settings/_settings.global';
@@ -28,6 +30,7 @@
 @import 'components/_section.scss';
 @import 'components/_button.scss';
 @import 'components/_link.scss';
+@import 'components/_inputs.scss';
 
 
 // PARTIALS
