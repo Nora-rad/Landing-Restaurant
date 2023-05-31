@@ -61,8 +61,8 @@
       <symbol id="icon-close" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
         <path d="M24 1.413 22.609.024 12 10.613 1.391.024 0 1.413 10.609 12 0 22.59l1.391 1.388L12 13.39l10.609 10.588L24 22.59 13.39 12 24 1.413Z" fill="#fff"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs>
       </symbol>
-      <symbol id="arrow-down" width="16" height="35" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="m8.795 34.733 6.94-6.994a.906.906 0 0 0 0-1.28.892.892 0 0 0-1.272 0l-5.41 5.447V.91A.907.907 0 0 0 8.147 0c-.5 0-.904.407-.904.91v30.995l-5.397-5.447a.892.892 0 0 0-1.272 0 .904.904 0 0 0-.265.644c0 .237.089.466.265.644l6.948 6.994a.899.899 0 0 0 1.272-.007Z" fill="#fff"/>
+      <symbol id="arrow-down"  fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.40768 24.809L9.8313 19.8134C10.0562 19.5596 10.0562 19.1526 9.8313 18.8988C9.60637 18.6451 9.24555 18.6451 9.02062 18.8988L5.5717 22.7896L5.5717 0.650226C5.5717 0.290751 5.31396 -2.04833e-07 4.99531 -2.18762e-07C4.67666 -2.3269e-07 4.41893 0.290751 4.41893 0.650226L4.41893 22.7896L0.979381 18.8988C0.754452 18.6451 0.393627 18.6451 0.168697 18.8988C0.0562323 19.0257 2.96575e-07 19.1896 2.89181e-07 19.3588C2.81787e-07 19.5279 0.0562323 19.6918 0.168697 19.8187L4.597 24.8143C4.81724 25.0628 5.18275 25.0628 5.40768 24.809Z" fill="white"/>
       </symbol>
     </defs>
   </svg>
@@ -99,13 +99,158 @@
       </h1>
       <p class="c-hero__off">30% off for the Christmas</p>
       <div class="u-flex c-hero__links">
-        <a href="" class="c-btn c-btn--primary" title="Book Now">Book Now</a>
-        <a href="" class="c-btn c-btn--dark" title="See Menu">See Menu</a>
+        <button  class="c-btn c-btn--primary js-scroll-book" aria-label="Book Now" title="Book Now">Book Now</button>
+        <button class="c-btn c-btn--dark js-scroll-menu" aria-label="See Menu" title="See Menu">See Menu</button>
       </div>
-    </div>
+       <button type="button" class="c-btn c-btn__scroll js-scroll-down" aria-label="Scroll Down">
+        <svg class="icon icon-arrow-down" width="10" height="25">
+          <use xlink:href="#arrow-down"></use>
+        </svg>
+      </button>
+     </div>
   </header>
   <main>
-
+      <section class="o-section o-section-why-us ">
+        <div class="o-section__wrapper">
+          <div class="bg-dark no-gutters c-why-us row">
+            <div class="col-lg-6 col-12">
+              <div class="p-2">
+                <h2 class="c-title c-why-us__title">Why Customers Like us?</h2>
+                <div class="c-why-us__note">
+                  <p>When we first opened our restaurant, it didn't take a long time for us to prove our difference. </p>
+                  <p>Our native chefs, the Chinese atmosphere of the restaurant, the variety of dishes, the high quality of foods, and affordable prices made us well-known very soon. </p>
+                  <p>Today, we have customers not only from this area but also from other cities.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="c-why-us__image">
+                <img src="/images/pasta.webp" width="397" height="460" alt="Why Customers Like us" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="o-section o-section-menu">
+        <div class="o-section__wrapper">
+          <div class="bg-dark js-tabs no-gutters u-flex--cross-center c-menu row">
+            <div class="col-lg-6 col-12">
+              <h2 class="c-title c-why-us__title mb-0">Our Menu</h2>
+            </div>
+            <div class="col-lg-6 col-12 c-tab-button__wrapper u-flex">
+                 <button class="js-tab-button active upper-case"   data-id="starter">starter</button>
+                <button class="js-tab-button upper-case" data-id="main">main dishes</button>
+                <button class="js-tab-button upper-case"   data-id="desserts">desserts</button>
+            </div>
+            <div class="col-12">
+              <div class="tab-content__wrapper">
+                <div class="c-tab-content js-tab-content active" id="starter">
+                  <ul class="c-menu__list">
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Dim Sums</p>
+                          <small class="c-menu__desc">Chestnuts, mushroom, spring onion, ginger, coriander</small>
+                        </div>
+                        <div class="c-menu__pay">$35</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Pork Wontons</p>
+                          <small class="c-menu__desc">Pork, chestnuts, bamboo shoots, spring onion egg, wonton</small>
+                        </div>
+                        <div class="c-menu__pay">$30</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Real Kung Pao chicken</p>
+                          <small class="c-menu__desc">Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</small>
+                        </div>
+                        <div class="c-menu__pay">$18</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Stir Fried Tofu with Rice</p>
+                          <small class="c-menu__desc">Tofu, rice, vinger, soy sauce, seasmae oil, ginger</small>
+                        </div>
+                        <div class="c-menu__pay">$25</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Chinese pepper steak</p>
+                          <small class="c-menu__desc">Steak, pepper, vinger wine, ginger</small>
+                        </div>
+                        <div class="c-menu__pay">$15</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-tab-content js-tab-content" id="main">
+                  <ul class="c-menu__list">
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Chicken with Chestnuts</p>
+                          <small class="c-menu__desc">Chicken, chestnuts, soy sauce, vinger</small>
+                        </div>
+                        <div class="c-menu__pay">$19</div>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="u-flex c-menu__item">
+                          <div>
+                            <p class="c-menu__title">Honey Walnut Shrimp</p>
+                            <small class="c-menu__desc">Wulnuts, mayonnaise, prawns, honey, egg, rice flour</small>
+                          </div>
+                          <div class="c-menu__pay">$15</div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-tab-content js-tab-content" id="desserts">
+                  <ul class="c-menu__list">
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Kung Pao chicken</p>
+                          <small class="c-menu__desc">Chicken tights, shaoxing wine, soy sauce, chilli, peanuts, cucumber</small>
+                        </div>
+                        <div class="c-menu__pay">$19</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Tsao's chicken</p>
+                          <small class="c-menu__desc">Chicken tights, rice vinger, rice wine, orange zest, banana ketchup, garlic</small>
+                        </div>
+                        <div class="c-menu__pay">$35</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="u-flex c-menu__item">
+                        <div>
+                          <p class="c-menu__title">Chinese Steamed Halibut</p>
+                          <small class="c-menu__desc">Fillet halibut, ginger, coriander, soy sauce</small>
+                        </div>
+                        <div class="c-menu__pay">$35</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   </main>
   <!-- build:js scripts/vendor.min.js -->
   <!-- endbuild -->

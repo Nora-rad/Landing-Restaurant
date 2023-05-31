@@ -46,7 +46,7 @@
               color:$secondary-color;
             }
             &.active{
-              @include mq(mobile) {
+              @include mq($from:0,$until:tablet) {
                 color:$secondary-color;
               }
               &:after{
@@ -57,7 +57,7 @@
                 left: 0;
                 background-color:  $secondary-color;
                 top: 100%;
-                @include mq(mobile) {
+                @include mq($from:0,$until:tablet) {
                   display: none;
                 }
               }
@@ -113,6 +113,24 @@
         flex-direction: column;
         gap: 0.5rem;
         margin-top: 2rem;
+      }
+    }
+    .c-btn__scroll{
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      padding: 14px;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      margin-top: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s ease-in-out;
+      @include mq($from:tablet , $until: desktop){
+        display: flex;
+      }
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.9);
       }
     }
   }
