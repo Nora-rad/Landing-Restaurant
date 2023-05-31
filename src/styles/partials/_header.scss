@@ -128,10 +128,11 @@
       transition: all .3s ease-in-out;
       @include mq($from:tablet , $until: desktop){
         display: flex;
+        &:hover{
+          background-color: rgba(0, 0, 0, 0.9);
+        }
       }
-      &:hover{
-        background-color: rgba(0, 0, 0, 0.9);
-      }
+
     }
   }
 }

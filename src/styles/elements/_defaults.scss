@@ -23,6 +23,9 @@ body::-webkit-scrollbar-thumb:hover{background:#6c757d}
 .upper-case{
   text-transform: uppercase;
 }
+.relative{
+  position: relative;
+}
 .bg-dark{
   background-color:$bg-dark;
   border: 1px solid #8D8D8D;
@@ -70,7 +73,14 @@ body::-webkit-scrollbar-thumb:hover{background:#6c757d}
     left: 0;
     background-color:  $secondary-color;
     top: 115%;
-    @include mq($from:0,$until:desktop) {
+    @include mq($from:0,$until:desktop)  {
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+  &--center{
+    text-align: center;
+    &:after{
       left:50%;
       transform: translateX(-50%);
     }

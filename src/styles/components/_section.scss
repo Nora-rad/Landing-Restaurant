@@ -22,6 +22,7 @@
       @include mq($from:desktop) {
         position: absolute;
         height: 120%;
+        width: auto;
         top: 0;
         left: 50%;
         -webkit-transform: translateX(-50%);
@@ -73,21 +74,6 @@
     }
   }
 }
-.o-section-book{
-  background: linear-gradient(180deg, #000000 3.68%, rgba(0, 0, 0, 0.2) 72.66%), url('../../images/book-bg.webp') center;
-  background-size: cover;
-   .form__group{
-    flex-direction: column;
-     margin-bottom: 1.5rem;
-    label{
-      color: #909090;
-      margin-bottom: .5rem;
-    }
-     .c-btn--primary{
-       line-height: 2rem;
-     }
-  }
-}
 .c-popular-dishes{
   &__wrapper{
     width: 100%;
@@ -103,6 +89,7 @@
   }
   &__img{
     max-width: 100%;
+    height: auto;
   }
   &__note{
     color: #DADADA;
@@ -114,7 +101,7 @@
   }
   .carousel-cell{
     width: 100%;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -128,5 +115,37 @@
       padding-right: 60px;
       text-align: right;
     }
+  }
+}
+.c-book{
+  background: linear-gradient(180deg, #000000 3.68%, rgba(0, 0, 0, 0.2) 72.66%), url('../../images/book-bg.webp') center;
+  background-size: cover;
+  &__desc{
+    @include mq($from:0,$until:desktop) {
+      text-align: center;
+    }
+  }
+   .form__group{
+    flex-direction: column;
+     margin-bottom: 1.5rem;
+    label{
+      color: #909090;
+      margin-bottom: .5rem;
+    }
+     #incrementButton{
+      color:#909090;
+       position: absolute;
+       right: 15px;
+       top: 2.2rem;
+     }
+     #decrementButton{
+       color:#909090;
+       position: absolute;
+       left:15px;
+       top: 2.2rem;
+     }
+     .c-btn--primary{
+       line-height: 2rem;
+     }
   }
 }
