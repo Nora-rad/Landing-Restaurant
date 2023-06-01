@@ -132,6 +132,7 @@
     label{
       color: #909090;
       margin-bottom: .5rem;
+      display: block;
     }
      #incrementButton{
       color:#909090;
@@ -147,6 +148,7 @@
      }
      .c-btn--primary{
        line-height: 2rem;
+       width: 100%;
      }
   }
 }
