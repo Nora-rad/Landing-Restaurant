@@ -17,6 +17,7 @@ get_header();
 	<main>
 		<?php
 		get_template_part( 'template-parts/why-us');
+		get_template_part( 'template-parts/book');
 		?>
 	</main>
 <?php
