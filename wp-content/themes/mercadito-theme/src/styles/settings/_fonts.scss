@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Roboto Slab Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/RobotoSlab-Bold.woff') format('woff') , url("../../../assets/fonts/RobotoSlab-Bold.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Roboto Slab Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:  url('../fonts/RobotoSlab-Regular.woff') format('woff'), url('../../../assets/fonts/RobotoSlab-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Catamaran Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Catamaran-Regular.woff') format('woff') , url("../../../assets/fonts/Catamaran-Regular.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Catamaran Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:  url('../fonts/Catamaran-Bold.woff') format('woff'), url('../../../assets/fonts/Catamaran-Bold.woff2') format('woff2');
+}
