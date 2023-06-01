@@ -4,11 +4,8 @@
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXXX-X');
+  <script defer>
+    function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-XXXXXX-X");
   </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,8 +40,8 @@
 
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#D14800">
-  <link rel="preload" fetchpriority="high" as="image" href="/images/logo.svg" type="image/svg+xml">
-  <link rel="preload" fetchpriority="high" as="image" href="/images/header-bg.webp" type="image/webp">
+  <link rel="preload" fetchpriority="high" as="image" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preload" fetchpriority="high" as="image" href="images/header-bg.webp" type="image/webp">
   <!-- build:css styles/vendor.min.css -->
   <!-- endbuild -->
 
@@ -84,11 +81,11 @@
         </div>
         <div class="nav__menu">
           <ul class="c-nav u-flex">
-            <li class="c-nav__items js-nav-item"><a href="#why-us" title="why us" class="active c-nav__items__link upper-case">why us</a></li>
-            <li class="c-nav__items js-nav-item"><a href="#menu" title="menu" class="c-nav__items__link upper-case">menu</a></li>
-            <li class="c-nav__items js-nav-item"><a href="#popular-dishes" title="c-nav__items__link popular dishes" class="upper-case">popular dishes</a></li>
-            <li class="c-nav__items js-nav-item"><a href="#book" title="book" class="c-nav__items__link upper-case">book</a></li>
-            <li class="c-nav__items js-nav-item"><a href="#contact" title="contact" class="c-nav__items__link upper-case">contact</a></li>
+            <li class="c-nav__items js-nav-item"><button data-scroll="section-why-us" title="why us" class="active c-nav__items__link upper-case">why us</button></li>
+            <li class="c-nav__items js-nav-item"><button data-scroll="section-menu" title="menu" class="c-nav__items__link upper-case">menu</button></li>
+            <li class="c-nav__items js-nav-item"><button data-scroll="section-popular-dishes" title="c-nav__items__link popular dishes" class="upper-case">popular dishes</button></li>
+            <li class="c-nav__items js-nav-item"><button data-scroll="section-book" title="book" class="c-nav__items__link upper-case">book</button></li>
+            <li class="c-nav__items js-nav-item"><button data-scroll="section-footer" title="contact" class="c-nav__items__link upper-case">contact</button></li>
           </ul>
           <button class="nav__menu--close  js-nav-menu-close" type="button" aria-label="Close menu">
             <svg class="icon icon-close" width="24" height="24">
@@ -109,10 +106,10 @@
       </h1>
       <p class="c-hero__off">30% off for the Christmas</p>
       <div class="u-flex c-hero__links">
-        <button  class="c-btn c-btn--primary js-scroll-book" aria-label="Book Now" title="Book Now">Book Now</button>
-        <button class="c-btn c-btn--dark js-scroll-menu" aria-label="See Menu" title="See Menu">See Menu</button>
+        <button  class="c-btn c-btn--primary js-scroll-book" data-scroll="section-book" aria-label="Book Now" title="Book Now">Book Now</button>
+        <button class="c-btn c-btn--dark js-scroll-menu" data-scroll="section-menu" aria-label="See Menu" title="See Menu">See Menu</button>
       </div>
-       <button type="button" class="c-btn c-btn__scroll js-scroll-down" aria-label="Scroll Down">
+       <button type="button" class="c-btn c-btn__scroll js-scroll-down" data-scroll="section-why-us" aria-label="Scroll Down">
         <svg class="icon icon-arrow-down" width="10" height="25">
           <use xlink:href="#arrow-down"></use>
         </svg>
@@ -120,7 +117,7 @@
      </div>
   </header>
   <main>
-      <section class="o-section o-section-why-us ">
+      <section class="o-section o-section-why-us " data-scroll="#section-why-us">
         <div class="o-section__wrapper">
           <div class="bg-dark no-gutters c-why-us row">
             <div class="col-lg-6 col-12">
@@ -135,13 +132,13 @@
             </div>
             <div class="col-lg-6 col-12">
               <div class="c-why-us__image">
-                <img src="/images/pasta.webp" width="469" height="443" alt="Why Customers Like us" loading="lazy">
+                <img src="images/pasta.webp" width="469" height="443" alt="Why Customers Like us" loading="lazy">
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="o-section o-section-menu">
+      <section class="o-section o-section-menu" data-scroll="#section-menu">
         <div class="o-section__wrapper">
           <div class="bg-dark js-tabs no-gutters u-flex--cross-center c-menu row">
             <div class="col-lg-6 col-12">
@@ -261,7 +258,7 @@
           </div>
         </div>
       </section>
-      <section class="o-section o-section-popular-dishes pt-0">
+      <section class="o-section o-section-popular-dishes pt-0" data-scroll="#section-popular-dishes">
         <div class="o-section__wrapper">
           <div class="bg-dark js-tabs no-gutters u-flex--cross-center c-popular-dishes row">
             <div class="col-lg-6 col-12">
@@ -328,7 +325,7 @@
           </div>
         </div>
       </section>
-      <section class="o-section o-section-book c-book pt-0">
+      <section class="o-section o-section-book c-book pt-0" data-scroll="#section-book">
         <div class="o-section__wrapper">
           <div class="row no-gutters">
             <div class="col-12 col-lg-6">
@@ -375,7 +372,7 @@
           </div>
         </div>
       </section>
-      <footer class="o-section section--footer pt-0">
+      <footer class="o-section section--footer pt-0"  data-scroll="#section-footer">
         <div class="o-section__wrapper">
           <div class="bg-dark bg-transparent">
             <h4 class="c-title c-title--center c-footer mb-0">Contact Us</h4>

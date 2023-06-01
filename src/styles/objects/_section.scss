@@ -4,7 +4,7 @@
     padding: 4.375em 0;
   }
   main & {
-    @include mq($from:0,$until:tablet) {
+    @include mq($from:0px,$until:tablet) {
       padding: 0;
     }
   }
@@ -17,7 +17,7 @@
     max-width: calc(1164px - 2em);
   }
   main & {
-    @include mq($from:0,$until:tablet) {
+    @include mq($from:0px,$until:tablet) {
       padding: 0;
     }
   }

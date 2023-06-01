@@ -97,15 +97,21 @@ function styles() {
     'android >= 4.4',
     'bb >= 10'
   ];
-
   // For best performance, don't add Sass partials to `gulp.src`
   return src(['src/styles/**/*.scss', 'src/styles/**/*.css'])
     .pipe($.newer('.tmp/styles'))
+
     .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
     // .pipe(sass().on('error', sass.logError))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe($.size({ title: 'styles' }))
+    .pipe($.sourcemaps.init())
+    .pipe($.sourcemaps.write())
+    .pipe(dest('.tmp/styles'))
+    .pipe($.concat('main.min.css'))
+    .pipe(dest('dist/styles'))
     .pipe(dest('.tmp/styles'));
+
 }
 
 exports.styles = styles;

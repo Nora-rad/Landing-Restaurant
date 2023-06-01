@@ -1,8 +1,5 @@
 // TOOLS
-@import '../../node_modules/normalize.css/normalize';
-
 @import 'tools/_mq';
-@import 'tools/tools.aliases';
 @import 'tools/_flickity';
 
 // SETTINGS
@@ -11,8 +8,7 @@
 @import 'settings/_fonts.scss';
 
 // ELEMENTS
-@import 'elements/_var.scss';
-@import 'elements/_ie.scss';
+ @import 'elements/_ie.scss';
 @import 'elements/_defaults.scss';
 @import 'elements/_misc.scss';
 
