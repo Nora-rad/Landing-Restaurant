@@ -1,4 +1,4 @@
-input[type=text],input[type="date"],input[type="time"],input[type="number"]{
+.form__group input{
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color:$main-color;
