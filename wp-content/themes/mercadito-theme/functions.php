@@ -174,3 +174,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Automatically generate ACF JSON on save
+ */
+function generate_acf_json_on_save($group)
+{
+	$json_dir = WP_CONTENT_DIR . '/acf-json';
+	if (!file_exists($json_dir)) {
+		mkdir($json_dir);
+	}
+	$json_file = $json_dir . '/' . $group['key'] . '.json';
+	$fields = acf_get_fields($group);
+	$json_data = json_encode($fields, JSON_PRETTY_PRINT);
+	file_put_contents($json_file, $json_data);
+}
+// Hook the function to the 'acf/save_post' action
+add_action('acf/save_post', 'generate_acf_json_on_save');
+
